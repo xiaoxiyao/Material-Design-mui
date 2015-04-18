@@ -981,6 +981,7 @@ input[type="submit"]:enabled:active, input[type="submit"].mui-active:enabled,
 }
 
 .mui-btn-outlined {
+	border: 1px solid rgb(146, 146, 146);
   background-color: transparent;
 }
 .mui-btn-outlined.mui-btn-primary, .mui-btn-outlined.mui-btn-blue {
@@ -1011,8 +1012,6 @@ input[type="submit"]:enabled:active, input[type="submit"].mui-active:enabled,
 }
 
 .mui-btn-link {
-  padding-top: 6px;
-  padding-bottom: 6px;
   color: rgb(0, 150, 136);
   background-color: transparent;
   border: 0;
@@ -1033,11 +1032,11 @@ input[type="submit"]:enabled:active, input[type="submit"].mui-active:enabled,
 .mui-btn .mui-badge {
   margin: -2px -4px -2px 4px;
   font-size: 14px;
+  background-color: rgba(0, 0, 0, .15);
 }
 
-.mui-btn .mui-badge-inverted,
-.mui-btn:enabled:active .mui-badge-inverted {
-  background-color: transparent;
+.mui-btn.mui-btn-outlined .mui-badge.mui-badge-inverted {
+    border: inherit;
 }
 
 .mui-btn-primary:enabled:active .mui-badge-inverted{
