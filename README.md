@@ -1,5 +1,6 @@
 # Material-Design-mui
 #### 基于[mui](http://dcloudio.github.io/mui)的Material Design风格的UI
+由于其他Material Design风格的web框架（如[Material Design For Bootstrap](http://fezvrasta.github.io/bootstrap-material-design/)、[Materialize](http://materializecss.com/)等）主要是针对pc端网页的，对移动端的优化并不是太好，而mui是以ios为主要风格的框架，对于喜欢android Material Design风格的同学，就只好自己动手了^_^
 ### 版本记录
 * 2015.4.18 添加了修改后的js和css文件，并将mui.ttf 换成了Material-Design-Icons.ttf
 
