@@ -3518,7 +3518,7 @@ var mui = (function(document, undefined) {
 	};
 })(mui, window, document);
 /**
- * snap 重构
+ * snap 重构 slider
  * @param {Object} $
  * @param {Object} window
  */
@@ -5617,10 +5617,9 @@ var mui = (function(document, undefined) {
  * @returns {undefined}
  */
 (function($, window, document) {
-	var CLASS_ICON = 'mui-icon';
-	var CLASS_ICON_CLEAR = 'mui-icon-clear';
-	var CLASS_ICON_SPEECH = 'mui-icon-speech';
-	var CLASS_ICON_SEARCH = 'mui-icon-search';
+	var CLASS_ICON_CLEAR = 'mdi-content-clear';
+	var CLASS_ICON_SPEECH = 'mdi-hardware-keyboard-voice';
+	var CLASS_ICON_SEARCH = 'mdi-action-search';
 	var CLASS_INPUT_ROW = 'mui-input-row';
 	var CLASS_PLACEHOLDER = 'mui-placeholder';
 	var CLASS_TOOLTIP = 'mui-tooltip';
@@ -5649,11 +5648,11 @@ var mui = (function(document, undefined) {
 			this.sliderActionSelector = SELECTOR_TOOLTIP;
 		} else { //clear,speech,search
 			if (~this.options.actions.indexOf('clear')) {
-				this.clearActionClass = CLASS_ICON + ' ' + CLASS_ICON_CLEAR + (element.value ? '' : (' ' + CLASS_HIDDEN));
+				this.clearActionClass = CLASS_ICON_CLEAR + (element.value ? '' : (' ' + CLASS_HIDDEN));
 				this.clearActionSelector = SELECTOR_ICON_CLOSE;
 			}
 			if (~this.options.actions.indexOf('speech')) { //only for 5+
-				this.speechActionClass = CLASS_ICON + ' ' + CLASS_ICON_SPEECH;
+				this.speechActionClass = CLASS_ICON_SPEECH;
 				this.speechActionSelector = SELECTOR_ICON_SPEECH;
 			}
 			if (~this.options.actions.indexOf('search')) {
@@ -5702,10 +5701,10 @@ var mui = (function(document, undefined) {
 	Input.prototype.createAction = function(row, actionClass, actionSelector) {
 		var action = row.querySelector(actionSelector);
 		if (!action) {
-			var action = document.createElement('span');
+			var action = document.createElement('i');
 			action.className = actionClass;
 			if (actionClass === this.searchActionClass) {
-				action.innerHTML = '<span class="' + CLASS_ICON + ' ' + CLASS_ICON_SEARCH + '"></span>' + this.element.getAttribute('placeholder');
+				action.innerHTML = '<i class="' + CLASS_ICON_SEARCH + '"></i>' + this.element.getAttribute('placeholder');
 				this.element.setAttribute('placeholder', '');
 			}
 			row.insertBefore(action, this.element.nextSibling);
