@@ -8,6 +8,10 @@
 ### 修改内容
 * 主题颜色修改（primary success info warning danger），参考自[Material Design For Bootstrap](http://fezvrasta.github.io/bootstrap-material-design/)
 * 按钮样式修改，参考自[Materialize](http://materializecss.com/)
+<<<<<<< HEAD
 * radio checkbox switch等 样式修改，参考自[Materialize](http://materializecss.com/)
+=======
+* radio checkbox switch card 等样式修改，参考自[Materialize](http://materializecss.com/)
+>>>>>>> origin/master
 * 删除了默认switch组件绑定的相关事件
 * 将mui自带字体图标换成[Material-Design-Icons](https://github.com/google/material-design-icons)
